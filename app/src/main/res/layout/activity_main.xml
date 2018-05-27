@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:background="@color/colorBackground"
+    tools:context="com.example.aasims.smarthealth.activities.MainActivity">
+
+
+
+
+
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:onClick="Patient"
+        android:padding="15dp"
+        android:text="Patient"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:background="@drawable/buttonround"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button6"
+        android:layout_alignStart="@+id/button6"
+        android:layout_below="@+id/button6"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:onClick="Doctor"
+        android:padding="15dp"
+        android:text="Doctor"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:background="@drawable/buttonround"
+        />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button6"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:text="Choose Your Path"
+        android:textColor="#fff"
+        android:layout_marginLeft="60dp"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/shlogo" />
+
+
+</RelativeLayout>

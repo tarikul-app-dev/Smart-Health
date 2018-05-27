@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "45707429772",
+    "firebase_url": "https://smart-health-bf8ff.firebaseio.com",
+    "project_id": "smart-health-bf8ff",
+    "storage_bucket": "smart-health-bf8ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45707429772:android:a50692c29e3999f5",
+        "android_client_info": {
+          "package_name": "com.example.aasims.smarthealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45707429772-q5pr584qulie91utt2hksge2ouu74klh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aasims.smarthealth",
+            "certificate_hash": "25833fc06bbdba6b2b31a811fe240b33afc40085"
+          }
+        },
+        {
+          "client_id": "45707429772-75u012fk5e5ajvv8bren3275o4coclm7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD263j8_jeyzQtcWNMs0INnqQUMxmZjh3E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45707429772-75u012fk5e5ajvv8bren3275o4coclm7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

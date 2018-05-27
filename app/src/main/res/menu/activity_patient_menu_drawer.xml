@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_search_dis"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Search Disease" />
+        <item
+            android:id="@+id/nav_viewdoc"
+            android:icon="@drawable/ic_local_library_black_24dp"
+            android:title="View Doctor" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="Feedback" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Logout" />
+    </group>
+
+
+
+</menu>
