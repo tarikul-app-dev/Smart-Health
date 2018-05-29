@@ -46,29 +46,6 @@ public class Notification extends Fragment {
         notificationList = new ArrayList<>();
         databaseHelper = new DatabaseHelper(getActivity());
 
-//        NotificationM notificationM1 = new NotificationM();
-//        notificationM1.setPatientId("1000");
-//        notificationM1.setSymptom("headeche,chills,fatigue,skin");
-//        notificationM1.setPredictedDisease("diphtheria");
-//        notificationM1.setDiseaseType("infectious");
-//        notificationM1.setDate("18/05/2018 11:52PM");
-//        notificationList.add(notificationM1);
-//
-//        NotificationM notificationM2 = new NotificationM();
-//        notificationM2.setPatientId("1001");
-//        notificationM2.setSymptom("headeche,chills,fatigue,skin");
-//        notificationM2.setPredictedDisease("diphtheria");
-//        notificationM2.setDiseaseType("infectious");
-//        notificationM2.setDate("18/05/2018 11:52PM");
-//        notificationList.add(notificationM2);
-//
-//        NotificationM notificationM3 = new NotificationM();
-//        notificationM3.setPatientId("1002");
-//        notificationM3.setSymptom("headeche,chills,fatigue,skin");
-//        notificationM3.setPredictedDisease("diphtheria");
-//        notificationM3.setDiseaseType("infectious");
-//        notificationM3.setDate("18/05/2018 11:52PM");
-//        notificationList.add(notificationM3);
 
 
         notificationList = databaseHelper.getAllNotification();

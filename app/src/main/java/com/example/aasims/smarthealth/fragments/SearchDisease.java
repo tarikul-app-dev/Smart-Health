@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.aasims.smarthealth.R;
 import com.example.aasims.smarthealth.database.DatabaseHelper;
@@ -63,9 +64,9 @@ public class SearchDisease extends Fragment {
         jointPoints = getResources().getStringArray(R.array.joint_symptom);
         databaseHelper = new DatabaseHelper(getActivity());
          diseaseMap = new HashMap<String, List<String>>();
-        diseaseMap.put("headeche", new ArrayList<String>(Arrays.asList("chills","fever")));
+        diseaseMap.put("headache", new ArrayList<String>(Arrays.asList("chills","fever")));
         diseaseMap.put("diabetes", new ArrayList<String>(Arrays.asList("feeling very thirsty","feeling very tired","weight loss and loss of muscle bulk")));
-
+        diseaseMap.put("diphtheria", new ArrayList<String>(Arrays.asList("headache","chills","fatigue","skin","coloration")));
 
     }
 
@@ -99,9 +100,14 @@ public class SearchDisease extends Fragment {
                 //databaseHelper.addNotification()
 
                 List specificSymptom = getSymptom(searchItem);
-                String symptom = convertListToString(specificSymptom);
-                notificationM.setSymptom(symptom);
-                if(searchItem.equals("headeche")){
+                if(specificSymptom!=null){
+                    String symptom = convertListToString(specificSymptom);
+                    notificationM.setSymptom(symptom);
+                }else {
+                    Toast.makeText(getActivity(),"Can not found this Disease",Toast.LENGTH_SHORT).show();
+                }
+
+                if(searchItem.equals("headache")){
                     notificationM.setPredictedDisease("Dengue");
                     notificationM.setDiseaseType("Infectious");
                 }
@@ -130,9 +136,13 @@ public class SearchDisease extends Fragment {
                     }
                 }
 
-                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, specificSymptom);
-                spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
-                spinSymptom.setAdapter(spinnerArrayAdapter);
+                if(specificSymptom!=null){
+                    ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, specificSymptom);
+                    spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down vieww
+                    spinSymptom.setAdapter(spinnerArrayAdapter);
+                }
+
+
                // specificSymptom.clear();
             }
         });
@@ -196,6 +206,8 @@ public class SearchDisease extends Fragment {
             if(key.equals(disease)){
                 symptomList = entry.getValue();
             }
+
+
 
 
         }
